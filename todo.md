@@ -1,5 +1,7 @@
 # todo list for stock_strikepoint
 
+## R1 - Improved View
+
 ## R0 - create home folder, Read CSV Files, basic starting view
 
 ```
@@ -12,12 +14,12 @@
   * ( done ) - start a csv lib folder
   * ( done ) - test out csv parse by reading CSV files that where downloaded from e-trades
   * ( done ) - have a set_data_key function in root index.js
-  
+  * ( done ) - have a config.save method 
   * ( done ) - start a preload.js file
+  * ( done ) - have a config.get method that will just simply get the current config
   
-  * (      ) - have a view for a data key in the html
+  * (      ) - have a crude start of a view for at least one data key in the html
   
-  * (      ) - have a config.save method
   * (      ) - have a config.reset method
   
 ```
