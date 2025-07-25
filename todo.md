@@ -29,9 +29,8 @@ in cells and so forth.
   * ( done ) - start a preload.js file
   * ( done ) - have a config.get method that will just simply get the current config
   * ( done ) - have a crude start of a view for at least one data key in the html
-
-  * (      ) - readme files for all current libs
-  * (      ) - start a 'per_day' lib
+  * ( done ) - readme files for all current libs
+  * ( done ) - start a 'per_day' lib
   * (      ) - have a gains and losses def for csv_data.json
   * (      ) - let the 'crude start' view be a 'raw' view
   * (      ) - have a 'per_day' view
