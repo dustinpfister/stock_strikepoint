@@ -1,4 +1,6 @@
-const { contextBridge } = require('electron')
+const { contextBridge } = require('electron');
+const config = require( './lib/config/index.js' );
+const csv_parse = require('./lib/csv_parse/index.js');
 
 
 const set_data_key = (data, conf, data_key='DownloadTxnHistory') => {
@@ -18,10 +20,22 @@ const set_data_key = (data, conf, data_key='DownloadTxnHistory') => {
 
 const API = {};
 
-API.data = {};
-
 API.update_data = () => {
-
+    let conf = {};
+    let data = {};
+    return config.get()
+    .then( (conf_new) => {
+        conf = conf_new;
+        return Promise.all(  Object.keys(conf.csv_data).map( (data_key)=>{
+            return set_data_key(data, conf, data_key);
+        }));
+    })
+    .then(()=>{
+        return {
+            data: data,
+            conf: conf
+        };
+    })
 };
 
 API.foo = () => {

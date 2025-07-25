@@ -17,9 +17,6 @@
   * ( done ) - have a config.save method 
   * ( done ) - start a preload.js file
   * ( done ) - have a config.get method that will just simply get the current config
-  
-  * (      ) - have a crude start of a view for at least one data key in the html
-  
+  * ( done ) - have a crude start of a view for at least one data key in the html
   * (      ) - have a config.reset method
-  
 ```
