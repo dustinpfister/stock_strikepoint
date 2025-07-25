@@ -14,15 +14,32 @@ const create_main_window = () => {
     win.loadFile('./html/index.html');
 };
 
+const set_data_key = (data, conf, data_key='DownloadTxnHistory') => {
+    return csv_parse(conf.csv_data[ data_key ].uri, conf.csv_data[data_key].header )
+    .then( (result) => {
+        const data_rows = data[data_key] = [];
+        const header = conf.csv_data[data_key].header;
+        result.forEach( ( row ) => {
+            const keys = Object.keys(row);
+            if( keys.length === header.length && row[ keys[0] ] != header[0] ){
+                data_rows.push(row);
+            }
+        });
+        return data;
+    });
+};
+
 app.whenReady()
 .then( () => {
     return config.setup();
 })
-.then ( ( conf_setup ) => {
+.then( (conf_setup) => {
     conf = conf_setup;
-    console.log(conf);
+    return Promise.all(  Object.keys(conf.csv_data).map( (data_key)=>{
+        return set_data_key(data, conf, data_key);
+    }));
 })
-.then( () => {
+.then( (results) => {
     create_main_window();
 })
 
