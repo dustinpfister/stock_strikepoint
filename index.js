@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const config = require('./lib/config/index.js');
+const path = require('path');
 
 const fs = require('fs').promises;
 const csv_parse = require('./lib/csv_parse/index.js');
@@ -9,7 +10,12 @@ let data = {};
 
 const create_main_window = () => {
     const win = new BrowserWindow({
-        width: 800, height: 600
+        width: 800, height: 600,
+        webPreferences: {
+            nodeIntegration: false,
+            contextIsolation: true,
+            preload: path.join(__dirname, 'preload.js')
+        }
     });
     win.loadFile('./html/index.html');
 };

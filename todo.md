@@ -13,6 +13,8 @@
   * ( done ) - test out csv parse by reading CSV files that where downloaded from e-trades
   * ( done ) - have a set_data_key function in root index.js
   
+  * ( done ) - start a preload.js file
+  
   * (      ) - have a view for a data key in the html
   
   * (      ) - have a config.save method
