@@ -5,6 +5,7 @@ const fs = require('fs').promises;
 const csv_parse = require('./lib/csv_parse/index.js');
 
 let conf = {};
+let data = {};
 
 const create_main_window = () => {
     const win = new BrowserWindow({
@@ -19,13 +20,9 @@ app.whenReady()
 })
 .then ( ( conf_setup ) => {
     conf = conf_setup;
-    create_main_window();
-    //return fs.readdir( conf.dir_csv );
+    console.log(conf);
 })
-//.then( (csv_contents) => {
-//   console.log( csv_contents );
-//})
-//.then ( ( )=> {
-//    create_main_window();
-//})
+.then( () => {
+    create_main_window();
+})
 

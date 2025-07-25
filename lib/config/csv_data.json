@@ -1,0 +1,6 @@
+{
+  "DownloadTxnHistory" : {
+    "uri": null,
+    "header": [ "TransactionDate", "TransactionType", "SecurityType", "Symbol", "Quantity",  "Amount",  "Price",  "Commission",  "Description" ]
+  }
+}
