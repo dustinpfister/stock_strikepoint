@@ -1,8 +1,19 @@
 # todo list for stock_strikepoint
 
-## R1 - Improved View
+## RX - CSV generator
+```
+I do at this point have a csv parser in place which is great, but I think it will also be very helpful 
+to have a generator as well. This will allow for me to create custom csv files from the main data in
+strikepoint which goes without saying, but it will also allow for things like injecting expressions
+in cells and so forth.
+```
 
-## R0 - create home folder, Read CSV Files, basic starting view
+## RX - Improved View
+```
+
+```
+
+## R0 - create home folder, Read CSV Files, 'raw' and 'per_day' view
 
 ```
   * ( done ) - start a config lib that will be used to create, and update a main config object
@@ -18,5 +29,17 @@
   * ( done ) - start a preload.js file
   * ( done ) - have a config.get method that will just simply get the current config
   * ( done ) - have a crude start of a view for at least one data key in the html
+
+  * (      ) - readme files for all current libs
+  * (      ) - start a 'per_day' lib
+  * (      ) - have a gains and losses def for csv_data.json
+  * (      ) - let the 'crude start' view be a 'raw' view
+  * (      ) - have a 'per_day' view
+  
+
+  
+  
   * (      ) - have a config.reset method
+  * (      ) - start a custom menu starting with view
+  
 ```
